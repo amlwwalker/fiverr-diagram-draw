@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Jokeish App</title>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdn.auth0.com/js/auth0/9.0/auth0.min.js"></script>
+
+</head>
+
+<body>
+
+
+    <h1>Flow chart builder</h1>
+    <h3>create a flow chart and save it for later!</h3>
+    <h3>Requirements</h3>
+    <ul>
+        <li>a config file that defines a components properties in json, from say 3 standard types of components
+            <ul>
+                <li>e.g. say three components (square/circle/rectangle), each with inputs(left) and outputs(right)</li>
+                <li>from the config file i can define which component type to use, and any properties on it</li>
+            </ul>
+        </li>
+        <li>
+            a json object that defines the current diagram and can be saved/loaded from (for now local storage is fine)
+        </li>
+        <li>a properties pane when a node is selected, properties can be set changed on it (which properties are defined
+            in the config file of component types, mentioned above
+        </li>
+        <li>components required
+            <ul>
+                <li>selecting a node to add to the diagram:
+                    https://mrblenny.github.io/react-flow-chart/index.html?path=/story/sidebar--drag-and-drop</li>
+                <li>properties of a node that can be changed
+                    https://mrblenny.github.io/react-flow-chart/index.html?path=/story/sidebar--selected-sidebar</li>
+                <li>
+                    custom node types for different types of element (in a components folder). my backend has elements
+                    which each need a node. i imagine only a few types of basic node, but from the config file being
+                    able to set the default properties of them
+                </li>
+                <li>
+                    storing the state redux/rematch etc so that i can export it
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div id="app"></div>
+    <script src="./static/js/bundle.js"></script>
+</body>
